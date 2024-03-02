@@ -11,3 +11,7 @@
   height: auto;
   margin-bottom: 20px; /* Add margin to the bottom of the image */
 }
+
+.centered h1 {
+  font-family: 'Sk-Modernist';
+}
