@@ -1,0 +1,13 @@
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items towards the start */
+  align-items: center;
+  height: 100vh;
+}
+
+.centered img {
+  width: 20%;
+  height: auto;
+  margin-bottom: 20px; /* Add margin to the bottom of the image */
+}
