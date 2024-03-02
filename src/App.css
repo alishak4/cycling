@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.App-Section {
+  font-family: 'Sk-Modernist';
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

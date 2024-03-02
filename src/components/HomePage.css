@@ -3,7 +3,13 @@
   flex-direction: column;
   justify-content: flex-start; /* Align items towards the start */
   align-items: center;
-  height: 100vh;
+  height: 50vh;
+  margin-bottom: 0px; /* Remove bottom margin of paragraph */
+}
+
+.centered p {
+  margin: 5; /* Reset margin of paragraph */
+  margin-bottom: 0;
 }
 
 .centered img {
@@ -14,4 +20,19 @@
 
 .centered h1 {
   font-family: 'Sk-Modernist';
+  font-size: '34pt';
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 10px; /* Gap between images */
+  margin-top: 10px; /* Adjust margin-top as needed */
+  margin-left: 10px;
+  margin-right: 10px
+}
+
+.grid-item {
+  width: 100%; /* Ensure images fill the grid cell */
+  height: auto; /* Maintain aspect ratio */
 }
