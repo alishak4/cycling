@@ -1,5 +1,6 @@
 import React from "react";
 import './HomePage.css';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import mountains from '../images/mountains.jpg';
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
@@ -14,12 +15,11 @@ const HomePage = () => {
   return (
     <div> 
     <div className="centered">
-      <h1> The Himalayan Odyssey </h1>
+      {/* <h1> The Himalayan Odyssey </h1> */}
       <img src={mountains} alt="mountains" />
       <p> The Himalayas revered for centuries as the abode of the Gods, have been a source of inspiration for man since aeons.</p> 
      <p>On March 20th, 1986, we set out on a mission to know our Himalayas.</p>
     </div>
-
     <div className="grid">
     <img src={img2} alt="picture1" className="grid-item"/>
     <img src={img5} alt="picture2" className="grid-item"/>
@@ -28,6 +28,8 @@ const HomePage = () => {
     <div className="centered">
     <h1> The Himalayan Odyssey </h1>
     <img src={bike} alt="cycle" />
+    {/* <button className="button"> Map </button> */}
+    <Link to="/map"> <button className="button"> Map </button>  </Link>
     </div>
  
     <img src={img3} alt="picture1" className="grid-item"/>
