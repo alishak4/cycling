@@ -28,11 +28,13 @@ const HomePage = () => {
     <div className="centered">
     <h1> The Himalayan Odyssey </h1>
     <img src={bike} alt="cycle" />
-    {/* <button className="button"> Map </button> */}
+    <div className="button-group">
     <Link to="/map"> <button className="button"> Map </button>  </Link>
+    <Link to="/about"> <button className="button"> About </button>  </Link>
+    </div>
     </div>
  
-    <img src={img3} alt="picture1" className="grid-item"/>
+    <img src={img3} alt="picture3" className="grid-item"/>
     </div>
     
     </div>

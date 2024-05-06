@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import maplibregl from 'maplibre-gl';
 import polyline from '@mapbox/polyline';
 import { RoutingApi, CostingModel } from '@stadiamaps/api';
+import './HomePage.css';
 
 // Call setRTLTextPlugin only once when the component is imported
 maplibregl.setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.1/mapbox-gl-rtl-text.js");
@@ -93,12 +94,11 @@ const Map = () => {
     }, []);
 
     return (
-        <div style={{ display: "flex", fontFamily: "Sk-Modernist" }}>
+        <div className='map-grid'>
             <div id="map" style={{ width: "600px", height: "800px" }}></div>
             <div>
                 <h1> Map</h1>
             </div>
-
         </div>
     );
 };

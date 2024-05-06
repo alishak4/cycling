@@ -24,7 +24,6 @@
   font-size: '34pt';
 }
 
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns */
@@ -38,10 +37,51 @@
   width: 100%; /* Ensure images fill the grid cell */
   height: auto; /* Maintain aspect ratio */
 }
+.button-group {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons */
+}
 
 .button {
   font-family: 'Sk-Modernist';
   font-size: '28pt';
   padding: 10px 20px; /* Adjust the padding as needed */
   width: auto; /* Ensure button width adjusts based on content */
+}
+
+.map-grid {
+  display: flex;
+  margin-top: 10px;
+}
+
+.map-grid #map {
+  width: 600px;
+  height: 800px;
+  margin-left: 5px;
+}
+
+.map-grid h1 {
+  margin-left: 20px; /* Add margin to create space between the map and the heading */
+  margin-top: 0px;
+  font-family: 'Sk-Modernist'; /* Apply custom font */
+  font-size: 28pt; /* Adjust font size as needed */
+}
+
+.about-grid {
+  display: flex;
+  margin-left: 10px;
+  height: 100vh; /* Set height of container to full viewport height */
+
+}
+
+.about-text {
+  flex: 1; /* Let the text container take up remaining space */
+  padding: 20px; 
+  font-family: 'Sk-Modernist'; 
+  font-size: 27px;
+}
+
+.about-image {
+  width: auto; /* Allow the image width to adjust automatically */
+  height: 100%; /* Make the image fill the container vertically */
 }
