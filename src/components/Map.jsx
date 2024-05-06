@@ -96,8 +96,15 @@ const Map = () => {
     return (
         <div className='map-grid'>
             <div id="map" style={{ width: "600px", height: "800px" }}></div>
-            <div>
+            <div className='map-text'>
                 <h1> Map</h1>
+                <p>
+                    On March 20th, 1986, we set out on a mission to know our Himalayas. But our expedition was different. We conquered no peaks, except those of Pain, Defeat and Fatigue. 
+                    <br/> <br/>
+            
+            We retraced the route of the Sixth Himalayan Car Rally (1985) on BICYCLES. It was a 3200 km odyssey which took us over every road surface known to man. The route offered a height variation that was phenomenal. 
+            <br/> <br/>
+            We travelled through the plains and into the mountains upto a height of 10,300 ft. at the Jalori Pass. We went through rain, hail and snow and some of the roads which we traversed were so rough that they hadn't seen a bicycle before!</p>
             </div>
         </div>
     );

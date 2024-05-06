@@ -25,12 +25,14 @@
 }
 
 .grid {
+  padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns */
   gap: 10px; /* Gap between images */
   margin-top: 5px; /* Adjust margin-top as needed */
   margin-left: 10px;
   margin-right: 10px
+  
 }
 
 .grid-item {
@@ -54,19 +56,20 @@
   margin-top: 10px;
 }
 
-.map-grid #map {
-  width: 600px;
+#map {
+  flex: 1; /* Make the map fill remaining space */
   height: 800px;
   margin-left: 5px;
 }
 
-.map-grid h1 {
+.map-text {
+  width: 50%; /* Set width of the text column */
   margin-left: 20px; /* Add margin to create space between the map and the heading */
   margin-top: 0px;
   font-family: 'Sk-Modernist'; /* Apply custom font */
-  font-size: 28pt; /* Adjust font size as needed */
+  font-size: 15pt; 
+  padding-right: 20px;
 }
-
 .about-grid {
   display: flex;
   margin-left: 10px;
