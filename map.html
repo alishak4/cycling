@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vector Map Demo</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script type="text/javascript" src="//unpkg.com/maplibre-gl@4.0.2/dist/maplibre-gl.js"></script>
+    <script type="text/javascript" src="//unpkg.com/@stadiamaps/api@2.1"></script>
+    <link href="//unpkg.com/maplibre-gl@4.0.2/dist/maplibre-gl.css" rel="stylesheet" />
+
+    <!-- We'll load the polyline library from unpkg for convenience in this tutorial for simplicity -->
+    <script type="text/javascript" src="https://unpkg.com/@mapbox/polyline"></script>
+
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript">
+      function simple_route(startLat, startLon, endLat, endLon, costing, callback) {
+        const api = new stadiaMapsApi.RoutingApi();
+
+        // Build a request body for the route request
+        const req = {
+          locations: [
+            {
+              lat: startLat,
+              lon: startLon,
+              type: "break"
+            },
+            {
+              lat: endLat,
+              lon: endLon,
+              type: "break"
+            }
+          ],
+          "costing": costing,
+        };
+
+        api.route({routeRequest: req}).then(callback).catch(function () {
+          console.error(e);
+        });
+      }
+
+      var map = new maplibregl.Map({
+        container: "map",
+        style: "https://tiles.stadiamaps.com/styles/alidade_smooth.json",  // Style URL; see our documentation for more options
+        center: [12, 53],  // Initial focus coordinate
+        zoom: 4
+      });
+
+      // MapLibre GL JS does not handle RTL text by default,
+      // so we recommend adding this dependency to fully support RTL rendering if your style includes RTL text
+      maplibregl.setRTLTextPlugin('https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.2.3/mapbox-gl-rtl-text.min.js');
+
+      // Add zoom and rotation controls to the map.
+      map.addControl(new maplibregl.NavigationControl());
+
+      // Find a route between Santa's Village and Tallinn,
+      // where a legend claims the first Christmas tree may
+      // have appeared: https://www.visitestonia.com/en/why-estonia/the-tale-of-tallinns-most-famous-christmas-tree.
+      // We'll assume that Santa's Reindeer are on strike,
+      // so he has to drive a truck. (In case you're wondering
+      // how he gets across the water, there is a ferry involved.)
+      simple_route(66.543333, 25.8475, 59.43995, 24.73715, stadiaMapsApi.CostingModel.Truck, function(response) {
+        // Construct a bounding box in the sw, ne format required by MapLibre. Note the lon, lat order.
+        var sw = [response.trip.summary.minLon, response.trip.summary.minLat];
+        var ne = [response.trip.summary.maxLon, response.trip.summary.maxLat];
+
+        // Zoom to the new bounding box to focus on the route,
+        // with a 50px padding around the edges. See https://maplibre.org/maplibre-gl-js/docs/API/classes/Map/#fitbounds
+        map.fitBounds([sw, ne], {padding: 50});
+
+        // For each leg of the trip...
+        response.trip.legs.forEach(function(leg, idx) {
+          // Add a layer with the route polyline as an overlay on the map
+          var layerID = "leg-" + idx;  // Unique ID with request ID and leg index
+          // Note: Our polylines have 6 digits of precision, not 5
+          var geometry = polyline.toGeoJSON(leg.shape, 6);
+          map.addLayer({
+            "id": layerID,
+            "type": "line",
+            "source": {
+              "type": "geojson",
+              "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": geometry
+              }
+            },
+            "layout": {
+              "line-join": "round",
+              "line-cap": "round"
+            },
+            "paint": {
+              "line-color": "#0072ce",
+              "line-opacity": 0.3,
+              "line-width": 5
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

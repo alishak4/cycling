@@ -23,6 +23,7 @@
   font-size: '34pt';
 }
 
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns */
