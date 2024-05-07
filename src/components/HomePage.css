@@ -1,4 +1,5 @@
 .centered {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Align items towards the start */
@@ -97,3 +98,22 @@
   display: block; /* Ensure the SVG is displayed as a block element */
   margin: 0 auto; /* Center the SVG horizontally */
 }
+=======
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items towards the start */
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .centered img {
+    width: 20%;
+    height: auto;
+    margin-bottom: 20px; /* Add margin to the bottom of the image */
+  }
+  
+  .centered h1 {
+    font-family: 'Sk-Modernist';
+  }
+  
+>>>>>>> 549e035 (home page)

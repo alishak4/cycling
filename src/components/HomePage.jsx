@@ -1,5 +1,6 @@
 import React from "react";
 import './HomePage.css';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import mountains from '../images/mountains.jpg';
 import img1 from '../images/img1.jpg';
@@ -33,6 +34,16 @@ const HomePage = () => {
     
     </div>
     
+=======
+import mountains from '../images/mountains.png';
+
+const HomePage = () => {
+  return (
+    <div className="centered">
+      <h1> The Himalayan Odyssey </h1>
+      <img src={mountains} alt="mountains" />
+    </div>
+>>>>>>> 549e035 (home page)
   );
 }
 
