@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import HomePage from './components/HomePage';
 import Map from './components/Map';
 import About from './components/About';
-
+import RouteMap from './components/MapProj'
 function App() {
   return (
     <Router> 
@@ -12,6 +12,7 @@ function App() {
        <Route index element={<HomePage />} />
        <Route path="/map" element={<Map />} />
        <Route path='/about' element={<About />}/> 
+       <Route path="/mapproj" element={<RouteMap/>}/>
     </Routes>
     </Router>
   );
