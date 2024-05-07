@@ -14,12 +14,6 @@ const HomePage = () => {
     console.log("hello")
   return (
     <div> 
-    {/* <div className="centered"> */}
-      {/* <h1> The Himalayan Odyssey </h1> */}
-      {/* <img src={mountains} alt="mountains" />
-      <p> The Himalayas revered for centuries as the abode of the Gods, have been a source of inspiration for man since aeons.</p> 
-     <p>On March 20th, 1986, we set out on a mission to know our Himalayas.</p>
-    </div> */}
     <div className="grid">
     <img src={img2} alt="picture1" className="grid-item"/>
     <img src={img5} alt="picture2" className="grid-item"/>

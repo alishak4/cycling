@@ -21,7 +21,7 @@
 
 .centered h1 {
   font-family: 'Sk-Modernist';
-  font-size: '34pt';
+  font-size: '38pt';
 }
 
 .grid {
@@ -31,25 +31,27 @@
   gap: 10px; /* Gap between images */
   margin-top: 5px; /* Adjust margin-top as needed */
   margin-left: 10px;
-  margin-right: 10px
-  
+  margin-right: 10px;
+  height: 100vh; /* Set height to full viewport height */
 }
+
+.button {
+  font-family: 'Sk-Modernist';
+  font-size: 25px; /* Adjust button font size */
+  padding: 10px 20px; /* Adjust the padding as needed */
+  width: auto; /* Ensure button width adjusts based on content */
+}
+
 
 .grid-item {
   width: 100%; /* Ensure images fill the grid cell */
-  height: auto; /* Maintain aspect ratio */
+  height: 100%; /* Maintain aspect ratio */
 }
 .button-group {
   display: flex;
   gap: 10px; /* Adjust the gap between buttons */
 }
 
-.button {
-  font-family: 'Sk-Modernist';
-  font-size: '28pt';
-  padding: 10px 20px; /* Adjust the padding as needed */
-  width: auto; /* Ensure button width adjusts based on content */
-}
 
 .map-grid {
   display: flex;
@@ -87,4 +89,11 @@
 .about-image {
   width: auto; /* Allow the image width to adjust automatically */
   height: 100%; /* Make the image fill the container vertically */
+}
+
+.route-map {
+  width: 100%; /* Make the SVG fill its container */
+  height: 100vh; /* Allow the SVG to adjust its height automatically */
+  display: block; /* Ensure the SVG is displayed as a block element */
+  margin: 0 auto; /* Center the SVG horizontally */
 }
