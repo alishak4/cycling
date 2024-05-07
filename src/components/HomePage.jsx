@@ -25,6 +25,7 @@ const HomePage = () => {
     <div className="button-group">
     <Link to="/map"> <button className="button"> Map </button>  </Link>
     <Link to="/about"> <button className="button"> About </button>  </Link>
+    <Link to="/route"> <button className="button"> Route </button>  </Link>
     </div>
     </div>
  

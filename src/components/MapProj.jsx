@@ -39,7 +39,8 @@ const RouteMap = () => {
 
     // Define projection
     const projection = d3.geoMercator()
-      .fitSize([1000, 800], { type: "LineString", coordinates: locations.map(d => d.coordinates) });
+    .scale(9000) // Adjust the scale factor as needed
+    .fitSize([700, 1000], { type: "LineString", coordinates: locations.map(d => d.coordinates) });
 
     // Define path generator
     const pathGenerator = d3.geoPath().projection(projection);
@@ -101,7 +102,29 @@ const RouteMap = () => {
   }, []);
 
   return (
-    <svg ref={svgRef} className="route-map"></svg>
+    <div className='map-grid'> 
+    <svg ref={svgRef} style={{height:'1200px', width:'90%', paddingTop:'20px', paddingLeft:'20px'}}></svg>
+    <div> 
+    <h1 className='route-text'> Route </h1>
+    <p id='text'> We began cycling from Delhi passing through Panipat, Hardwar, Dakpathar, Mussorie, Paonta Sahib, Nahan, Solan and then to Simla.
+        <br/> <br/> 
+        From Simla we went on to the Jalori pass, Mandi, then back to Simla and then via Dehradun to Mussorie. 
+        
+        <br/> <br/>
+        From Mussorie to Tebri, Chopta, Karnaprayag, Ranikhet, Almora and then to Nainital. We then cycled via Kaladhongi, Corbett National Park,
+         Kotdwar, Ghaziabad and returned to Delhi. 
+        
+        <br/> <br/>
+        The total distance we covered was 3200 kms.
+March 28th 1986: We encountered our first major climb on this day enroute to Mussorie.
+<br/> <br/>
+The climb began from Yamuna bridge and it went on and on and on or so it seemed. After every few kms we would stop to regain
+<br/>
+ our strength and wonder whether the next turn would bring us to the top. But the next turn always brought forth a steeper climb
+ <br/> and we called it a never ending story. 
+ We were forever climbing the climbing roads but the top remained a distant hope, at times coming into view and at times fading into obivion. We were sweating profusely and <br/> we had a water shortage on the</p>
+    </div>
+    </div>
   );
 };
 
