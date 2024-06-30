@@ -18,17 +18,23 @@ const HomePage = () => {
     <img src={img2} alt="picture1" className="grid-item"/>
     <img src={img5} alt="picture2" className="grid-item"/>
     <img src={img6} alt="picture3" className="grid-item"/>
-    <img src={img4} alt="picture3" className="grid-item"/>
+    <img src={img4} alt="picture4" className="grid-item"/>
+
+    <div className="middle">
     <div className="centered">
     <h1> The Himalayan Odyssey </h1>
     <img src={bike} alt="cycle" />
     <div className="button-group">
     <Link to="/map"> <button className="button"> Map </button>  </Link>
     <Link to="/about"> <button className="button"> About </button>  </Link>
+    <Link to="/route"> <button className="button"> Route </button>  </Link>
+   
+    <Link to="/route"> <button className="button"> Team </button>  </Link>
+    <Link to="/route"> <button className="button"> Media </button>  </Link>
     </div>
     </div>
- 
-    <img src={img3} alt="picture3" className="grid-item"/>
+    </div>
+    <img src={img3} alt="picture5" className="grid-item"/>
     </div>
     
     </div>

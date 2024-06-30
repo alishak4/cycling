@@ -1,25 +1,37 @@
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items towards the start */
+  align-items: center;
+  height: 50vh;
+  margin-top: 0px;
+  margin-bottom: 0px; /* Remove bottom margin of paragraph */
+}
+
 .centered {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Align items towards the start */
   align-items: center;
   height: 50vh;
+  margin-top: 180px;
   margin-bottom: 0px; /* Remove bottom margin of paragraph */
 }
 
-.centered p {
+.middle p {
   margin: 5; /* Reset margin of paragraph */
+  margin-top: 10px;
   margin-bottom: 0;
   font-size: '28pt';
 }
 
-.centered img {
+.middle img {
   width: 20%;
   height: auto;
   margin-bottom: 20px; /* Add margin to the bottom of the image */
 }
 
-.centered h1 {
+.middle h1 {
   font-family: 'Sk-Modernist';
   font-size: '38pt';
 }
@@ -32,6 +44,7 @@
   margin-top: 5px; /* Adjust margin-top as needed */
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 5px;
   height: 100vh; /* Set height to full viewport height */
 }
 
@@ -46,6 +59,7 @@
 .grid-item {
   width: 100%; /* Ensure images fill the grid cell */
   height: 100%; /* Maintain aspect ratio */
+  object-fit: cover; 
 }
 .button-group {
   display: flex;
@@ -72,6 +86,20 @@
   font-size: 15pt; 
   padding-right: 20px;
 }
+
+.route-text {
+  width: 30%; /* Set width of the text column */
+  margin-left: 20px; /* Add margin to create space between the map and the heading */
+  font-family: 'Sk-Modernist'; /* Apply custom font */
+  font-size: 30pt; 
+  padding-right: 20px;
+}
+
+#text {
+  font-family: 'Sk-Modernist'; /* Apply custom font */
+  font-size: 15pt; 
+  padding-right: 20px;
+}
 .about-grid {
   display: flex;
   margin-left: 10px;
@@ -91,9 +119,4 @@
   height: 100%; /* Make the image fill the container vertically */
 }
 
-.route-map {
-  width: 100%; /* Make the SVG fill its container */
-  height: 100vh; /* Allow the SVG to adjust its height automatically */
-  display: block; /* Ensure the SVG is displayed as a block element */
-  margin: 0 auto; /* Center the SVG horizontally */
-}
+
