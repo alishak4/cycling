@@ -25,15 +25,16 @@ const HomePage = () => {
     <h1> The Himalayan Odyssey </h1>
     <img src={bike} alt="cycle" />
     <div className="button-group">
-    <Link to="/map"> <button className="button"> Map </button>  </Link>
-    <Link to="/about"> <button className="button"> About </button>  </Link>
-    <Link to="/route"> <button className="button"> Route </button>  </Link>
-  
-    <Link to="/route"> <button className="button"> Team </button>  </Link>
-    <Link to="/media"> <button className="button"> Media </button>  </Link>
-    </div>
-    </div>
-    </div>
+              <Link to="/map"> <button className="button"> Map </button>  </Link>
+              <Link to="/about"> <button className="button"> About </button>  </Link>
+              <Link to="/route"> <button className="button"> Route </button>  </Link>
+            </div>
+            <div className="button-group">
+              <Link to="/route"> <button className="button"> Team </button>  </Link>
+              <Link to="/media"> <button className="button"> Media </button>  </Link>
+            </div>
+          </div>
+        </div>
     <img src={img3} alt="picture5" className="grid-item"/>
     </div>
     
