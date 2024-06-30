@@ -28,9 +28,9 @@ const HomePage = () => {
     <Link to="/map"> <button className="button"> Map </button>  </Link>
     <Link to="/about"> <button className="button"> About </button>  </Link>
     <Link to="/route"> <button className="button"> Route </button>  </Link>
-   
+  
     <Link to="/route"> <button className="button"> Team </button>  </Link>
-    <Link to="/route"> <button className="button"> Media </button>  </Link>
+    <Link to="/media"> <button className="button"> Media </button>  </Link>
     </div>
     </div>
     </div>

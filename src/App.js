@@ -5,6 +5,8 @@ import HomePage from './components/HomePage';
 import Map from './components/Map';
 import About from './components/About';
 import RouteMap from './components/MapProj'
+import Media from './components/Media'
+
 function App() {
   return (
     <Router> 
@@ -13,6 +15,7 @@ function App() {
        <Route path="/map" element={<Map />} />
        <Route path='/about' element={<About />}/> 
        <Route path="/route" element={<RouteMap/>}/>
+       <Route path='/media' element={<Media/>}/>
     </Routes>
     </Router>
   );
