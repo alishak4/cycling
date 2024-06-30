@@ -15,10 +15,10 @@ const HomePage = () => {
   return (
     <div> 
     <div className="grid">
-    <img src={img2} alt="picture1" className="grid-item"/>
-    <img src={img5} alt="picture2" className="grid-item"/>
-    <img src={img6} alt="picture3" className="grid-item"/>
-    <img src={img4} alt="picture4" className="grid-item"/>
+    <img src="https://github.com/alishak4/cycling/assets/69810932/087b0d50-a15f-47e4-906d-d2f5213bc6de" alt="picture1" className="grid-item"/>
+    <img src="https://github.com/alishak4/cycling/assets/69810932/52f8eb6a-4cb1-4ef7-bca9-7ee8f18e130d" alt="picture2" className="grid-item"/>
+    <img src="https://github.com/alishak4/cycling/assets/69810932/e682811a-9b8c-405f-83a5-67b003f0ef10" alt="picture3" className="grid-item"/>
+    <img src="https://github.com/alishak4/cycling/assets/69810932/1720939f-cbe2-4656-b609-3ee960e7e6e7" alt="picture4" className="grid-item"/>
 
     <div className="middle">
     <div className="centered">
@@ -35,7 +35,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-    <img src={img3} alt="picture5" className="grid-item"/>
+    <img src="https://github.com/alishak4/cycling/assets/69810932/52d6c423-3765-4e2b-a0b3-f9cd23b37eff" alt="picture5" className="grid-item"/>
     </div>
     
     </div>
