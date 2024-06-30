@@ -8,8 +8,11 @@ import RouteMap from './components/MapProj'
 import Media from './components/Media'
 
 function App() {
+  const isDevelopment = process.env.NODE_ENV === 'development';
+  const basename = isDevelopment ? '/' : '/cycling'; // Set the basename for production only
+
   return (
-    <Router> 
+    <Router basename={basename}>
     <Routes>
        <Route index element={<HomePage />} />
        <Route path="/map" element={<Map />} />

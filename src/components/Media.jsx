@@ -1,6 +1,6 @@
 import React from "react";
 import './HomePage.css';
-import img7 from '../images/img7.jpg';
+// import img7 from '../images/img7.jpg';
 import bike from '../images/bike.svg'
 
 const Media = () => {
