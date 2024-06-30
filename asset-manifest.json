@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/cycling/src/index.js/static/css/main.7ae40c17.css",
-    "main.js": "/cycling/src/index.js/static/js/main.86c383f8.js",
-    "static/js/453.def0c762.chunk.js": "/cycling/src/index.js/static/js/453.def0c762.chunk.js",
-    "static/media/img5.jpg": "/cycling/src/index.js/static/media/img5.e389cb3f8c1167c36911.jpg",
-    "static/media/img2.jpg": "/cycling/src/index.js/static/media/img2.f25c7b8d274395cf3fd1.jpg",
-    "static/media/img7.jpg": "/cycling/src/index.js/static/media/img7.50c8d2737418dfbdeb09.jpg",
-    "static/media/img6.jpg": "/cycling/src/index.js/static/media/img6.720e630cce53409461b0.jpg",
-    "static/media/img1.jpg": "/cycling/src/index.js/static/media/img1.9e990a46f1442364cdd0.jpg",
-    "static/media/img3.jpg": "/cycling/src/index.js/static/media/img3.1a382fc9dd49774fa525.jpg",
-    "static/media/img4.jpg": "/cycling/src/index.js/static/media/img4.e2763512f75c982403cd.jpg",
-    "static/media/mountains.jpg": "/cycling/src/index.js/static/media/mountains.51cf4b18230157c44c05.jpg",
-    "static/media/bike.svg": "/cycling/src/index.js/static/media/bike.bda41a5287f960c391b3a6ea886b0261.svg",
-    "index.html": "/cycling/src/index.js/index.html",
-    "main.7ae40c17.css.map": "/cycling/src/index.js/static/css/main.7ae40c17.css.map",
-    "main.86c383f8.js.map": "/cycling/src/index.js/static/js/main.86c383f8.js.map",
-    "453.def0c762.chunk.js.map": "/cycling/src/index.js/static/js/453.def0c762.chunk.js.map"
+    "main.css": "/cycling/static/css/main.7ae40c17.css",
+    "main.js": "/cycling/static/js/main.a6391459.js",
+    "static/js/453.def0c762.chunk.js": "/cycling/static/js/453.def0c762.chunk.js",
+    "static/media/img5.jpg": "/cycling/static/media/img5.e389cb3f8c1167c36911.jpg",
+    "static/media/img2.jpg": "/cycling/static/media/img2.f25c7b8d274395cf3fd1.jpg",
+    "static/media/img7.jpg": "/cycling/static/media/img7.50c8d2737418dfbdeb09.jpg",
+    "static/media/img6.jpg": "/cycling/static/media/img6.720e630cce53409461b0.jpg",
+    "static/media/img1.jpg": "/cycling/static/media/img1.9e990a46f1442364cdd0.jpg",
+    "static/media/img3.jpg": "/cycling/static/media/img3.1a382fc9dd49774fa525.jpg",
+    "static/media/img4.jpg": "/cycling/static/media/img4.e2763512f75c982403cd.jpg",
+    "static/media/mountains.jpg": "/cycling/static/media/mountains.51cf4b18230157c44c05.jpg",
+    "static/media/bike.svg": "/cycling/static/media/bike.bda41a5287f960c391b3a6ea886b0261.svg",
+    "index.html": "/cycling/index.html",
+    "main.7ae40c17.css.map": "/cycling/static/css/main.7ae40c17.css.map",
+    "main.a6391459.js.map": "/cycling/static/js/main.a6391459.js.map",
+    "453.def0c762.chunk.js.map": "/cycling/static/js/453.def0c762.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7ae40c17.css",
-    "static/js/main.86c383f8.js"
+    "static/js/main.a6391459.js"
   ]
 }
