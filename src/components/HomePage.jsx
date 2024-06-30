@@ -18,7 +18,9 @@ const HomePage = () => {
     <img src={img2} alt="picture1" className="grid-item"/>
     <img src={img5} alt="picture2" className="grid-item"/>
     <img src={img6} alt="picture3" className="grid-item"/>
-    <img src={img4} alt="picture3" className="grid-item"/>
+    <img src={img4} alt="picture4" className="grid-item"/>
+
+    <div className="middle">
     <div className="centered">
     <h1> The Himalayan Odyssey </h1>
     <img src={bike} alt="cycle" />
@@ -28,8 +30,8 @@ const HomePage = () => {
     <Link to="/route"> <button className="button"> Route </button>  </Link>
     </div>
     </div>
- 
-    <img src={img3} alt="picture3" className="grid-item"/>
+    </div>
+    <img src={img3} alt="picture5" className="grid-item"/>
     </div>
     
     </div>
