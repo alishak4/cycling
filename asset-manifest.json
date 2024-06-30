@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cycling/static/css/main.7d0d2a65.css",
+    "main.css": "/cycling/static/css/main.de20f2de.css",
     "main.js": "/cycling/static/js/main.fb49fea4.js",
     "static/js/453.def0c762.chunk.js": "/cycling/static/js/453.def0c762.chunk.js",
     "static/media/img5.jpg": "/cycling/static/media/img5.e389cb3f8c1167c36911.jpg",
@@ -11,12 +11,12 @@
     "static/media/img4.jpg": "/cycling/static/media/img4.e2763512f75c982403cd.jpg",
     "static/media/bike.svg": "/cycling/static/media/bike.bda41a5287f960c391b3a6ea886b0261.svg",
     "index.html": "/cycling/index.html",
-    "main.7d0d2a65.css.map": "/cycling/static/css/main.7d0d2a65.css.map",
+    "main.de20f2de.css.map": "/cycling/static/css/main.de20f2de.css.map",
     "main.fb49fea4.js.map": "/cycling/static/js/main.fb49fea4.js.map",
     "453.def0c762.chunk.js.map": "/cycling/static/js/453.def0c762.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d0d2a65.css",
+    "static/css/main.de20f2de.css",
     "static/js/main.fb49fea4.js"
   ]
 }
