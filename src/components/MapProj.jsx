@@ -7,8 +7,12 @@ import './HomePage.css';
 
 const RouteMap = () => {
   const svgRef = useRef();
+  const effectRan = useRef(false);
 
   useEffect(() => {
+    if (effectRan.current) return;
+    effectRan.current = true;
+    
     // Define the locations
          const locations = [
               { name: 'Delhi', coordinates: [77.2090, 28.6139] }, 
