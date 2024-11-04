@@ -1,8 +1,8 @@
 import React from "react";
 import './HomePage.css';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import mountains from '../images/mountains.jpg';
-import img1 from '../images/img1.jpg';
+// import mountains from '../images/mountains.jpg';
+// import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
 import img3 from '../images/img3.jpg';
 import img5 from '../images/img5.jpg';
@@ -11,7 +11,6 @@ import img4 from '../images/img4.jpg';
 import bike from '../images/bike.svg';
 
 const HomePage = () => {
-    console.log("hello")
   return (
     <div> 
     <div className="grid">
@@ -30,7 +29,7 @@ const HomePage = () => {
     <Link to="/route"> <button className="button"> Route </button>  </Link>
    
     <Link to="/route"> <button className="button"> Team </button>  </Link>
-    <Link to="/route"> <button className="button"> Media </button>  </Link>
+    <Link to="/media"> <button className="button"> Media </button>  </Link>
     </div>
     </div>
     </div>
