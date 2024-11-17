@@ -30,7 +30,7 @@ const ImageStack = ({ images }) => {
                 alignItems: 'center',
                 cursor: 'pointer',
                 transition: 'transform 0.3s ease',
-                transform: isStackExpanded && zoomedImageIndex === null ? 'scale(1.1)' : 'scale(1)',
+                transform: isStackExpanded && zoomedImageIndex === null ? 'scale(1.5)' : 'scale(1)',
             }}
         >
             {images.map((image, index) => (
@@ -38,14 +38,13 @@ const ImageStack = ({ images }) => {
                     key={index}
                     src={image}
                     alt='Stacked'
-                    onClick={(e) => {
-                        // e.stopPropagation(); // Prevent triggering stack toggle when clicking an image
+                    onClick={() => {
                         handleImageClick(index);
                     }}
                     style={{
                         width: zoomedImageIndex === index ? '400px' : '150px', // Larger size for zoomed image
                         height: 'auto',
-                        marginTop: isStackExpanded ? '10px' : `-${index * 80}px`,
+                        marginTop: isStackExpanded ? '10px' : index === 0 ? '0px' : `-${index * 90}px`, // Adjust stack spacing
                         transition: 'margin 0.3s ease, width 0.3s ease, transform 0.3s ease',
                         boxShadow: zoomedImageIndex === index
                             ? '0px 8px 16px rgba(0, 0, 0, 0.5)'

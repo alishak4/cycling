@@ -1,0 +1,29 @@
+/* Style for the main media container */
+/* .media {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+} */
+
+/* Style for the grid containing the image stacks */
+#grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between the two stacks */
+    flex-wrap: wrap; /* Allow stacks to wrap on smaller screens */
+}
+
+/* Style for the Media title */
+.media h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.media-text {
+    flex: 1; /* Let the text container take up remaining space */
+    padding: 20px; 
+    font-family: 'Sk-Modernist'; 
+    font-size: 27px;
+  }

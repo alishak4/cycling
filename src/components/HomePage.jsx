@@ -20,7 +20,6 @@ const HomePage = () => {
     <img src={img4} alt="picture4" className="grid-item"/>
 
     <div className="middle">
-    <div className="centered">
     <h1> The Himalayan Odyssey </h1>
     <img src={bike} alt="cycle" />
     <div className="button-group">
@@ -30,7 +29,7 @@ const HomePage = () => {
    
     <Link to="/route"> <button className="button"> Team </button>  </Link>
     <Link to="/media"> <button className="button"> Media </button>  </Link>
-    </div>
+
     </div>
     </div>
     <img src={img3} alt="picture5" className="grid-item"/>
