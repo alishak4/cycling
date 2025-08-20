@@ -32,8 +32,9 @@
 }
 
 .middle h1 {
-  font-family: 'Sk-Modernist';
+  font-family: 'Teko';
   font-size: '38pt';
+  
 }
 
 .grid {
@@ -50,7 +51,7 @@
 }
 
 .button {
-  font-family: 'Sk-Modernist';
+ font-family: 'Teko';
   font-size: 25px; /* Adjust button font size */
   padding: 10px 20px; /* Adjust the padding as needed */
   width: auto; /* Ensure button width adjusts based on content */
@@ -72,6 +73,7 @@
 .map-grid {
   display: flex;
   margin-top: 10px;
+  margin: 20px;
 }
 
 #map {
@@ -84,7 +86,7 @@
   width: 50%; /* Set width of the text column */
   margin-left: 20px; /* Add margin to create space between the map and the heading */
   margin-top: 0px;
-  font-family: 'Sk-Modernist'; /* Apply custom font */
+ font-family: 'Teko';
   font-size: 15pt; 
   padding-right: 20px;
 }
@@ -92,13 +94,13 @@
 .route-text {
   width: 30%; /* Set width of the text column */
   margin-left: 20px; /* Add margin to create space between the map and the heading */
-  font-family: 'Sk-Modernist'; /* Apply custom font */
+   font-family: 'Teko';
   font-size: 30pt; 
   padding-right: 20px;
 }
 
 #text {
-  font-family: 'Sk-Modernist'; /* Apply custom font */
+ font-family: 'Teko';
   font-size: 15pt; 
   padding-right: 20px;
 }
@@ -112,13 +114,94 @@
 .about-text {
   flex: 1; /* Let the text container take up remaining space */
   padding: 20px; 
-  font-family: 'Sk-Modernist'; 
+  font-family: 'Teko';
   font-size: 27px;
 }
 
 .about-image {
   width: auto; /* Allow the image width to adjust automatically */
   height: 100%; /* Make the image fill the container vertically */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .middle {
+    height: auto;
+  }
+
+  .centered {
+    height: auto;
+    margin-top: 80px;
+  }
+
+  .middle img {
+    width: 40%;
+  }
+
+  .middle h1 {
+    font-size: 28pt;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 3px;
+    margin: 2px 3px;
+    width: 100%;
+  }
+ 
+  .grid-item {
+    width: 100%; /* Full width of the column */
+    height: 100%; /* Auto height to maintain aspect ratio */
+    object-fit: contain; /* Ensure full image is visible */
+  }
+
+  .middle img {
+    width: 60%;
+  }
+
+  .middle h1 {
+    margin-top: 0px;
+    font-size: 9pt;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px; /* Adjusted gap between buttons */
+    margin-top: 2px; /* Add margin to the top */
+  }
+
+  .button {
+    font-size: 9px;
+    padding: 5px 12px;
+  }
+
+  .step {
+    margin: "0 auto 2rem auto";
+  
+    border: "1px solid #333",
+
+  }
 }
 
 

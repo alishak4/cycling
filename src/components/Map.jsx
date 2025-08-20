@@ -9,23 +9,43 @@ maplibregl.setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-
 
 const Map = () => {
     useEffect(() => {
-        const simple_route = (startLat, startLon, endLat, endLon, costing, callback) => {
+        const locations = [
+            { name: 'Delhi', coordinates: [77.2090, 28.6139] },
+            { name: 'Panipat', coordinates: [76.9508, 29.3909] },
+            { name: 'Haridwar', coordinates: [78.1642, 29.9457] },
+            { name: 'Dakpathar', coordinates: [77.8486, 30.8861] },
+            { name: 'Mussoorie', coordinates: [78.0665, 30.4591] },
+            { name: 'Paonta Sahib', coordinates: [77.6174, 30.4361] },
+            { name: 'Nahan', coordinates: [77.2995, 30.5583] },
+            { name: 'Solan', coordinates: [77.1150, 30.9066] },
+            { name: 'Simla', coordinates: [77.1734, 31.1048] },
+            { name: 'Jalori Pass', coordinates: [77.4850, 31.6969] },
+            { name: 'Mandi', coordinates: [76.9264, 31.7771] },
+            { name: 'Dehradun', coordinates: [78.0322, 30.3165] },
+            { name: 'Mussorie', coordinates: [78.0648, 30.4591] },
+            { name: 'Tehri', coordinates: [78.4744, 30.3782] },
+            { name: 'Chopta', coordinates: [79.3067, 30.4207] },
+            { name: 'Karnaprayag', coordinates: [79.2043, 30.2306] },
+            { name: 'Raniket', coordinates: [79.4215, 29.6516] },
+            { name: 'Almora', coordinates: [79.6617, 29.6116] },
+            { name: 'Nainital', coordinates: [79.4712, 29.3803] },
+            { name: 'Kaladhongi', coordinates: [79.7843, 29.6759] },
+            { name: 'Corbett National Park', coordinates: [78.7567, 29.5183] },
+            { name: 'Kotdwar', coordinates: [78.5201, 29.7487] },
+            { name: 'Ghaziabad', coordinates: [77.4538, 28.6692] },
+            { name: 'Delhi', coordinates: [77.2090, 28.6139] }
+        ];
+
+        const multi_point_route = (locations, costing, callback) => {
             const api = new RoutingApi();
 
-            // Build a request body for the route request
             const req = {
-                locations: [{
-                    lat: startLat,
-                    lon: startLon,
+                locations: locations.map(loc => ({
+                    lat: loc.coordinates[1],
+                    lon: loc.coordinates[0],
                     type: "break"
-                },
-                {
-                    lat: endLat,
-                    lon: endLon,
-                    type: "break"
-                }
-                ],
-                "costing": costing,
+                })),
+                costing: costing
             };
 
             api.route({ routeRequest: req })
@@ -38,50 +58,43 @@ const Map = () => {
         // Initialize MapLibre GL map
         const map = new maplibregl.Map({
             container: "map",
-            style: "https://tiles.stadiamaps.com/styles/alidade_smooth.json", // Style URL; see our documentation for more options
-            center: [77.1025, 28.7041], // Initial focus coordinate
-            zoom: 4
+            style: "https://tiles.stadiamaps.com/styles/stamen_toner.json",
+            center: [77.1025, 28.7041],
+            zoom: 5
         });
 
         // Add zoom and rotation controls to the map.
         map.addControl(new maplibregl.NavigationControl());
 
-        simple_route(30.10615, 78.29062, 30.16773, 78.42906, CostingModel.Truck, function (response) {
-            // Construct a bounding box in the sw, ne format required by MapLibre. Note the lon, lat order.
-            var sw = [response.trip.summary.minLon, response.trip.summary.minLat];
-            var ne = [response.trip.summary.maxLon, response.trip.summary.maxLat];
+        map.addControl(new maplibregl.NavigationControl());
 
-            // Zoom to the new bounding box to focus on the route,
-            // with a 50px padding around the edges. See https://maplibre.org/maplibre-gl-js/docs/API/classes/Map/#fitbounds
-            map.fitBounds([sw, ne], {
-                padding: 50
-            });
+        multi_point_route(locations, CostingModel.Bicycle, function (response) {
+            const sw = [response.trip.summary.minLon, response.trip.summary.minLat];
+            const ne = [response.trip.summary.maxLon, response.trip.summary.maxLat];
 
-            // For each leg of the trip...
-            response.trip.legs.forEach(function (leg, idx) {
-                // Add a layer with the route polyline as an overlay on the map
-                var layerID = "leg-" + idx; // Unique ID with request ID and leg index
-                // Note: Our polylines have 6 digits of precision, not 5
-                var geometry = polyline.toGeoJSON(leg.shape, 6);
+            map.fitBounds([sw, ne], { padding: 50 });
+
+            response.trip.legs.forEach((leg, idx) => {
+                const geometry = polyline.toGeoJSON(leg.shape, 6);
                 map.addLayer({
-                    "id": layerID,
-                    "type": "line",
-                    "source": {
-                        "type": "geojson",
-                        "data": {
-                            "type": "Feature",
-                            "properties": {},
-                            "geometry": geometry
+                    id: "leg-" + idx,
+                    type: "line",
+                    source: {
+                        type: "geojson",
+                        data: {
+                            type: "Feature",
+                            properties: {},
+                            geometry: geometry
                         }
                     },
-                    "layout": {
+                    layout: {
                         "line-join": "round",
                         "line-cap": "round"
                     },
-                    "paint": {
+                    paint: {
                         "line-color": "#0072ce",
-                        "line-opacity": 0.3,
-                        "line-width": 5
+                        "line-opacity": 0.7,
+                        "line-width": 4
                     }
                 });
             });
