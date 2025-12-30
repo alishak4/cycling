@@ -1,27 +1,24 @@
 import './App.css';
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import HomePage from './components/HomePage';
-import Map from './components/Map';
+import MapComponent from './components/MapComponent';
 // import About from './components/About';
 import RouteMap from './components/RouteMap'
 import Media from './components/Media'
 // import ChapelHillMap from './components/ChapelHillMap';
 import Home2 from './components/Home2'
+import Gallery from './components/Gallery';
 function App() {
   const isDevelopment = process.env.NODE_ENV === 'development';
-  const basename = isDevelopment ? '/' : '/home-2'; // Set the basename for production only
+  const basename = isDevelopment ? '/' : '/home'; // Set the basename for production only
 
   return (
     <Router basename={basename}>
     <Routes>
-       <Route index element={<HomePage />} />
-       <Route path="/map" element={<Map />} />
-       {/* <Route path='/about' element={<About />}/>  */}
+       <Route index element={<Home2 />} />
+       <Route path="/map" element={<MapComponent />} />
        <Route path="/route" element={<RouteMap/>}/>
        <Route path='/media' element={<Media/>}/>
-       {/* <Route path='/chapel-hill-map' element={<ChapelHillMap/>}/> */}
-       <Route path='/home-2' element={<Home2/>}/>
+        <Route path='/gallery' element={<Gallery/>}/>
     </Routes>
     </Router>
   );

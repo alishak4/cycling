@@ -11,7 +11,7 @@ if (maplibregl.getRTLTextPluginStatus?.() === 'unavailable') {
   );
 }
 
-const Map = () => {
+export const Map = () => {
   useEffect(() => {
     const locations = [
       { name: 'Delhi', coordinates: [77.2090, 28.6139] },

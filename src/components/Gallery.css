@@ -1,0 +1,39 @@
+.gallery-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 👈 wider */
+  grid-auto-rows: 200px; /* taller base rows */
+  gap: 18px;
+  padding: 16px;
+}
+
+/* Base item */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease; /* keep animation */
+}
+
+/* Hover zoom */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Small images */
+.gallery-item.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Large images (featured) */
+.gallery-item.large {
+  grid-column: span 2; /* 👈 wider */
+  grid-row: span 2;
+}

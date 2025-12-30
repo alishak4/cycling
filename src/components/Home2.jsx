@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from "react";
 import scrollama from "scrollama";
 import "./Home2.css";
 import image from "../images/homepage_img.jpeg";
-import img2 from "../images/ics_047.jpg";
+// import img2 from "../images/ics_047.jpg";
 import image3 from "../images/img1.jpg";
 import image4 from "../images/img2.jpg";
 import image5 from "../images/img3.jpg";
 import image6 from "../images/img6.jpg";
-import image7 from "../images/img7.jpg";
+// import image7 from "../images/img7.jpg";
 import image8 from "../images/img5.jpg";
 import RouteMap from "./RouteMap";
 import { Link } from "react-router-dom";
@@ -102,13 +102,13 @@ const Home2 = () => {
                 <section id="scroll">
                     <div className="scroll__container">
                         <div className="step image-trigger" data-step="1">
-                            <img src={image7} alt="mountains" />
+                            <img src='https://github-production-user-asset-6210df.s3.amazonaws.com/69810932/344473364-087b0d50-a15f-47e4-906d-d2f5213bc6de.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251230%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251230T014818Z&X-Amz-Expires=300&X-Amz-Signature=4742cf690972789cc7ff61c12145a928296b5822791ec7acda3652fe3ba72aeb&X-Amz-SignedHeaders=host' alt="mountains" />
                         </div>
                         <div className="step image-trigger" data-step="2">
                             <img src={image8} alt="mountains" />
                         </div>
                         <div className="step image-trigger" data-step="3">
-                            <img src={img2} alt="mountains" />
+                            <img src='https://github-production-user-asset-6210df.s3.amazonaws.com/69810932/344473362-e682811a-9b8c-405f-83a5-67b003f0ef10.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251230%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251230T015333Z&X-Amz-Expires=300&X-Amz-Signature=ddba834647732bc566fce00b8224f2043b10bb5b0613e8b2296c2120b782a832&X-Amz-SignedHeaders=host' alt="mountains" />
                         </div>
                         <div className="step" data-step="4">
                             <img src={image6} alt="mountains" />
