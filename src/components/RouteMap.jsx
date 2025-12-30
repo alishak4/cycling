@@ -2,9 +2,8 @@
 import React, { useRef, useImperativeHandle, forwardRef } from 'react';
 import * as d3 from 'd3';
 import bike from '../images/bike.svg';
-import './HomePage.css';
-
-const RouteMap = forwardRef((props, ref) => {
+import './Route.css';
+export const RouteMap = forwardRef((props, ref) => {
   const svgRef = useRef();
   const locations = useRef([]);
   const started = useRef(false);
@@ -20,39 +19,43 @@ const RouteMap = forwardRef((props, ref) => {
 
   function drawMap() {
     const locs = [
-      { name: 'Delhi', coordinates: [77.2090, 28.6139] }, 
-      { name: 'Panipat', coordinates: [76.9508, 29.3909] }, 
-      { name: 'Haridwar', coordinates: [78.1642, 29.9457] }, 
-      { name: 'Dakpathar', coordinates: [77.8486, 30.8861] }, 
-      { name: 'Mussoorie', coordinates: [78.0665, 30.4591] }, 
-      { name: 'Paonta Sahib', coordinates: [77.6174, 30.4361] }, 
-      { name: 'Nahan', coordinates: [77.2995, 30.5583] }, 
-      { name: 'Solan', coordinates: [77.1150, 30.9066] }, 
+      { name: 'Delhi', coordinates: [77.2090, 28.6139] },
+      { name: 'Panipat', coordinates: [76.9508, 29.3909] },
+      { name: 'Haridwar', coordinates: [78.1642, 29.9457] },
+      { name: 'Dakpathar', coordinates: [77.8486, 30.8861] },
+      { name: 'Mussoorie', coordinates: [78.0665, 30.4591] },
+      { name: 'Paonta Sahib', coordinates: [77.6174, 30.4361] },
+      { name: 'Nahan', coordinates: [77.2995, 30.5583] },
+      { name: 'Solan', coordinates: [77.1150, 30.9066] },
       { name: 'Simla', coordinates: [77.1734, 31.1048] },
-      { name: 'Jalori Pass', coordinates: [77.4850, 31.6969] }, 
-      { name: 'Mandi', coordinates: [76.9264, 31.7771] }, 
-      { name: 'Dehradun', coordinates: [78.0322, 30.3165] }, 
-      { name: 'Mussorie', coordinates: [78.0648, 30.4591] }, 
-      { name: 'Tehri', coordinates: [78.4744, 30.3782] }, 
-      { name: 'Chopta', coordinates: [79.3067, 30.4207] }, 
-      { name: 'Karnaprayag', coordinates: [79.2043, 30.2306] }, 
-      { name: 'Raniket', coordinates: [79.4215, 29.6516] }, 
-      { name: 'Almora', coordinates: [79.6617, 29.6116] }, 
-      { name: 'Nainital', coordinates: [79.4712, 29.3803] }, 
-      { name: 'Kaladhongi', coordinates: [79.7843, 29.6759] }, 
-      { name: 'Corbett National Park', coordinates: [78.7567, 29.5183] }, 
-      { name: 'Kotdwar', coordinates: [78.5201, 29.7487] }, 
-      { name: 'Ghaziabad', coordinates: [77.4538, 28.6692] }, 
-      { name: 'Delhi', coordinates: [77.2090, 28.6139] } 
+      { name: 'Jalori Pass', coordinates: [77.4850, 31.6969] },
+      { name: 'Mandi', coordinates: [76.9264, 31.7771] },
+      { name: 'Dehradun', coordinates: [78.0322, 30.3165] },
+      { name: 'Mussorie', coordinates: [78.0648, 30.4591] },
+      { name: 'Tehri', coordinates: [78.4744, 30.3782] },
+      { name: 'Chopta', coordinates: [79.3067, 30.4207] },
+      { name: 'Karnaprayag', coordinates: [79.2043, 30.2306] },
+      { name: 'Raniket', coordinates: [79.4215, 29.6516] },
+      { name: 'Almora', coordinates: [79.6617, 29.6116] },
+      { name: 'Nainital', coordinates: [79.4712, 29.3803] },
+      { name: 'Kaladhongi', coordinates: [79.7843, 29.6759] },
+      { name: 'Corbett National Park', coordinates: [78.7567, 29.5183] },
+      { name: 'Kotdwar', coordinates: [78.5201, 29.7487] },
+      { name: 'Ghaziabad', coordinates: [77.4538, 28.6692] },
+      { name: 'Delhi', coordinates: [77.2090, 28.6139] }
     ];
     locations.current = locs;
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove(); // clear previous runs
 
+    const svgEl = svgRef.current;
+    const width = svgEl.clientWidth;
+    const height = svgEl.clientHeight;
+    
     const projection = d3.geoMercator()
       .scale(9000)
-      .fitSize([700, 600], { type: "LineString", coordinates: locs.map(d => d.coordinates) });
+      .fitExtent([[20, 20], [width - 20, height - 20]], { type: "LineString", coordinates: locs.map(d => d.coordinates) });
 
     const pathGenerator = d3.geoPath().projection(projection);
     const pathData = { type: 'LineString', coordinates: [] };
@@ -100,7 +103,7 @@ const RouteMap = forwardRef((props, ref) => {
         .attr('x', x + 6)
         .attr('y', y + 4)
         .text(loc.name)
-        .attr('font-size', '10px')
+        .attr('font-size', '12px')
         .attr('fill', 'black')
         .style('opacity', 0)
         .transition()
@@ -138,9 +141,33 @@ const RouteMap = forwardRef((props, ref) => {
   }
 
   return (
-    <div style={{ width: "100%", maxWidth: "900px", margin: "0 auto", height: "600px" }}>
-      <svg ref={svgRef} style={{ width: "100%", height: "100%", display: "block" }}></svg>
-    </div>
+    <section className="route-section route-step" data-step="route">
+      <div className="route-grid">
+        <div className="route-text">
+          <h1 className="route">THE ROUTE</h1>
+          <p className="route-info">
+            We began cycling from Delhi passing through Panipat, Haridwar,
+            Dakpathar, Mussoorie, Paonta Sahib, Nahan, Solan and then to Simla.
+          </p>
+
+          <p className="route-info">
+            From Simla we went on to Jalori Pass, Mandi, then back to Simla and then via Dehradun to Mussorie. <br />
+          </p>
+
+          <p className="route-info">
+            From Mussorie to Tehri, Chopta, Karnaprayag, Raniket, Almora and then to Nainital. We then cycled via Kaladhongi, Corbett National Park, Kotdwar, Ghaziabad and returned to Delhi
+          </p>
+        </div>
+        <div className="route-svg">
+          <svg
+            ref={svgRef}
+            preserveAspectRatio="xMidYMid meet"
+            style={{ width: "100%", height: "100%", display: "block", minHeight: '700px' }}
+          ></svg>
+        </div>
+      </div>
+
+    </section>
   );
 });
 

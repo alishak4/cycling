@@ -9,8 +9,9 @@ import image5 from "../images/img3.jpg";
 import image6 from "../images/img6.jpg";
 import image7 from "../images/img7.jpg";
 import image8 from "../images/img5.jpg";
+import RouteMap from "./RouteMap";
+import { Link } from "react-router-dom";
 import Map from "./Map";
-import RouteMap from "./MapProj";
 
 const Home2 = () => {
     const routeMapRef = useRef();
@@ -83,7 +84,6 @@ const Home2 = () => {
                     <img src={image4} alt="text" />
                     <img src={image5} alt="text" />
                 </div>
-
                 <div className="intro-text">
                     <p>
                         On March 20th, 1986, we set out on a mission to know our Himalayas.
@@ -92,38 +92,39 @@ const Home2 = () => {
                     </p>
                 </div>
 
-                <section id="scroll">
-  <div className="scroll__container">
-    <div className="step image-trigger" data-step="1">
-      <img src={image7} alt="mountains" />
-    </div>
-    <div className="step image-trigger" data-step="2">
-      <img src={image8} alt="mountains" />
-    </div>
-    <div className="step image-trigger" data-step="3">
-      <img src={img2} alt="mountains" />
-    </div>
-    <div className="step" data-step="4">
-      <img src={image6} alt="mountains" />
-    </div>
-  </div>
-</section>
-                <div >
-                    <Map />
+                <div className="button-group">
+                    <Link to="/gallery"><button className="intro-button">Gallery</button></Link>
+                    <Link to="/map"><button className="intro-button">Map</button></Link>
+                    <Link to="/route"><button className="intro-button">Route</button></Link>
+                    <Link to="/media"><button className="intro-button">Media</button></Link>
                 </div>
+
+                <section id="scroll">
+                    <div className="scroll__container">
+                        <div className="step image-trigger" data-step="1">
+                            <img src={image7} alt="mountains" />
+                        </div>
+                        <div className="step image-trigger" data-step="2">
+                            <img src={image8} alt="mountains" />
+                        </div>
+                        <div className="step image-trigger" data-step="3">
+                            <img src={img2} alt="mountains" />
+                        </div>
+                        <div className="step" data-step="4">
+                            <img src={image6} alt="mountains" />
+                        </div>
+                    </div>
+                </section>
+                
                 <div>
                     <section className="route-section route-step" data-step="route">
-                        <div className="route-text">
-                            <h1 className="route"> THE ROUTE </h1>
-                            <p className="route-info">
-                                We began cycling from Delhi passing through Panipat, Hardwar,
-                                Dakpathar, Mussorie, Paonta Sahib, Nahan, Solan and then to Simla.
-                            </p>
-                        </div>
                         <div className="route-svg">
                             <RouteMap ref={routeMapRef} />
                         </div>
                     </section>
+                </div>
+                <div>
+                    <Map/>
                 </div>
             </body>
         </div>
