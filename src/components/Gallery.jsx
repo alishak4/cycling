@@ -18,7 +18,7 @@ import gallery17 from '../images/gallery17.jpg';
 import gallery18 from '../images/gallery18.jpg';
 import gallery19 from '../images/gallery19.jpg';
 import gallery20 from '../images/gallery20.jpg';
-import gallery21 from '../images/gallery21.jpg';
+import img9 from '../images/img9.jpg';
 import gallery22 from '../images/gallery22.jpg';
 import gallery23 from '../images/gallery23.jpg';
 import gallery24 from '../images/gallery24.jpg';
@@ -66,25 +66,25 @@ import gallery65 from '../images/gallery65.jpg';
 import './Gallery.css';
 
 const largeImages = [
-  gallery1,
+  gallery41,
   gallery5,
-  gallery9,
+  gallery1,
   gallery14,
   gallery22,
   gallery30,
-  gallery41,
-  gallery55
+  gallery42,
+  gallery46
 ];
 
 const smallImages = [
-  gallery2, gallery3, gallery4, gallery6, gallery7, gallery8,
+  gallery2, gallery3, gallery4, gallery6, gallery7, gallery8,    
   gallery10, gallery11, gallery12, gallery13,
-  gallery15, gallery16, gallery17, gallery18, gallery19, gallery20,
-  gallery21, gallery23, gallery24, gallery25, gallery26, gallery27,
+  gallery15, gallery16, gallery17, gallery55, gallery19, gallery18,
+  gallery23, gallery24, gallery25, gallery26, gallery27, 
   gallery28, gallery29, gallery31, gallery32, gallery33, gallery34,
-  gallery35, gallery36, gallery37, gallery38, gallery39, gallery40,
-  gallery42, gallery43, gallery44, gallery45, gallery46,
-  gallery47, gallery48, gallery49, gallery50, gallery51, gallery52,
+  gallery35, gallery36, gallery43, gallery37, gallery38, gallery39, gallery40,
+  gallery9, img9, gallery44, gallery45, gallery20,
+  gallery47, gallery50,  gallery48, gallery49, gallery51, gallery52,
   gallery53, gallery54, gallery56, gallery57, gallery58, gallery59,
   gallery60, gallery61, gallery62, gallery63, gallery64, gallery65
 ];
