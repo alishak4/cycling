@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import scrollama from "scrollama";
-import "./Home2.css";
+import "./Home.css";
 import image from "../images/homepage_img.jpeg";
 import image3 from "../images/img1.jpg";
 import image4 from "../images/img2.jpg";
@@ -13,7 +13,7 @@ import img9 from '../images/img9.jpg';
 import Map from "./Map";
 import gallery5 from '../images/gallery5.jpg';
 
-const Home2 = () => {
+const Home = () => {
     const routeMapRef = useRef();
 
     useEffect(() => {
@@ -131,4 +131,4 @@ const Home2 = () => {
     );
 };
 
-export default Home2;
+export default Home;

@@ -5,16 +5,17 @@ import MapComponent from './components/MapComponent';
 import RouteMap from './components/RouteMap'
 import Media from './components/Media'
 // import ChapelHillMap from './components/ChapelHillMap';
-import Home2 from './components/Home2'
+import Home from './components/Home'
 import Gallery from './components/Gallery';
 function App() {
   const isDevelopment = process.env.NODE_ENV === 'development';
-  const basename = isDevelopment ? '/' : '/home'; // Set the basename for production only
+  const basename = isDevelopment ? '/' : '/cycling'; // Set the basename for production only
 
   return (
     <Router basename={basename}>
     <Routes>
-       <Route index element={<Home2 />} />
+       <Route index element={<Home />} />
+        <Route path="/cycling" element={<Home />} />
        <Route path="/map" element={<MapComponent />} />
        <Route path="/route" element={<RouteMap/>}/>
        <Route path='/media' element={<Media/>}/>
