@@ -1,8 +1,19 @@
 {
   "files": {
-    "main.css": "/cycling/static/css/main.5f7da1fa.css",
-    "main.js": "/cycling/static/js/main.40497ea1.js",
+    "main.css": "/cycling/static/css/main.ccb8c538.css",
+    "main.js": "/cycling/static/js/main.236535bc.js",
     "static/js/453.aa157088.chunk.js": "/cycling/static/js/453.aa157088.chunk.js",
+    "static/media/indianMountaineerPg1.png": "/cycling/static/media/indianMountaineerPg1.e78bdfd0635889933b3f.png",
+    "static/media/indianMountaineerPg4.png": "/cycling/static/media/indianMountaineerPg4.7ea4fd3fc4af58638e09.png",
+    "static/media/indianMountaineerPg9.png": "/cycling/static/media/indianMountaineerPg9.3e6531dbdcd28b4392e6.png",
+    "static/media/indianMountaineerPg7.png": "/cycling/static/media/indianMountaineerPg7.ebfc21956b34bdd5d335.png",
+    "static/media/indianMountaineerPg11.png": "/cycling/static/media/indianMountaineerPg11.1d0d9bcc943f7e5ac642.png",
+    "static/media/indianMountaineerPg10.png": "/cycling/static/media/indianMountaineerPg10.1983b88ae654457ab0c5.png",
+    "static/media/indianMountaineerPg6.png": "/cycling/static/media/indianMountaineerPg6.9786f39a9cdea01a9d57.png",
+    "static/media/indianMountaineerPg2.png": "/cycling/static/media/indianMountaineerPg2.12bf149c6d79099b942d.png",
+    "static/media/indianMountaineerPg5.png": "/cycling/static/media/indianMountaineerPg5.1a6271901c87673795be.png",
+    "static/media/indianMountaineerPg8.png": "/cycling/static/media/indianMountaineerPg8.df0cee38a149cfe2d96a.png",
+    "static/media/indianMountaineerPg3.png": "/cycling/static/media/indianMountaineerPg3.4bcb6572e7feebc5a107.png",
     "static/media/gallery48.jpg": "/cycling/static/media/gallery48.a5627ea25f2dc29e0060.jpg",
     "static/media/gallery18.jpg": "/cycling/static/media/gallery18.f35583235ad37ebefad1.jpg",
     "static/media/gallery3.jpg": "/cycling/static/media/gallery3.8b93fd2c476243f8081e.jpg",
@@ -16,6 +27,14 @@
     "static/media/gallery16.jpg": "/cycling/static/media/gallery16.92f1cd5e0718fe8d3462.jpg",
     "static/media/gallery33.jpg": "/cycling/static/media/gallery33.613c32b8d469cad129ef.jpg",
     "static/media/gallery7.jpg": "/cycling/static/media/gallery7.9cb71d5aa218928e656d.jpg",
+    "static/media/upbeatPg4.jpg": "/cycling/static/media/upbeatPg4.4610796617769f50b6ed.jpg",
+    "static/media/upbeatPg2.jpg": "/cycling/static/media/upbeatPg2.187f59bf27197c659ec5.jpg",
+    "static/media/upbeatPg3.jpg": "/cycling/static/media/upbeatPg3.a7e67afc75c1543fde44.jpg",
+    "static/media/upbeatPg1.jpg": "/cycling/static/media/upbeatPg1.8493d3d8d5d3b1303cfd.jpg",
+    "static/media/WWFpg3.jpg": "/cycling/static/media/WWFpg3.23dc5e7e03e627421bc7.jpg",
+    "static/media/WWFpg2.jpg": "/cycling/static/media/WWFpg2.9064b8cd8865e7a198ea.jpg",
+    "static/media/WWFpg1.jpg": "/cycling/static/media/WWFpg1.c99869b54c4846aee42c.jpg",
+    "static/media/WWFpg4.jpg": "/cycling/static/media/WWFpg4.18bb39720b41b58f09f2.jpg",
     "static/media/gallery60.jpg": "/cycling/static/media/gallery60.ef581420b5dcc17c6cee.jpg",
     "static/media/gallery63.jpg": "/cycling/static/media/gallery63.e7807cf6175652afc48b.jpg",
     "static/media/gallery46.jpg": "/cycling/static/media/gallery46.c827cce3190f0d9d06ff.jpg",
@@ -76,12 +95,12 @@
     "static/media/gallery10.jpg": "/cycling/static/media/gallery10.2eecac486ab6cf03cd43.jpg",
     "static/media/bike.svg": "/cycling/static/media/bike.bda41a5287f960c391b3a6ea886b0261.svg",
     "index.html": "/cycling/index.html",
-    "main.5f7da1fa.css.map": "/cycling/static/css/main.5f7da1fa.css.map",
-    "main.40497ea1.js.map": "/cycling/static/js/main.40497ea1.js.map",
+    "main.ccb8c538.css.map": "/cycling/static/css/main.ccb8c538.css.map",
+    "main.236535bc.js.map": "/cycling/static/js/main.236535bc.js.map",
     "453.aa157088.chunk.js.map": "/cycling/static/js/453.aa157088.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f7da1fa.css",
-    "static/js/main.40497ea1.js"
+    "static/css/main.ccb8c538.css",
+    "static/js/main.236535bc.js"
   ]
 }
