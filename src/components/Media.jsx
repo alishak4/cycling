@@ -55,6 +55,7 @@ const Media = () => {
     const [index, setIndex] = useState(0);
     const [currentImages, setCurrentImages] = useState([])
 
+    
     const openBook = (images) => {
         setCurrentImages(images)
         setIndex(0);

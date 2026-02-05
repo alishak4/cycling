@@ -119,7 +119,7 @@ const Home = () => {
                 <div>
                     <section className="route-section route-step" data-step="route">
                         <div className="route-svg">
-                            <RouteMap ref={routeMapRef} />
+                            <RouteMap ref={routeMapRef} autoStart={false} />
                         </div>
                     </section>
                 </div>

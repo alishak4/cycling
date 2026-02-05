@@ -41,7 +41,7 @@ export const Map = () => {
 
     const map = new maplibregl.Map({
       container: 'map',
-      style: 'https://tiles.stadiamaps.com/styles/stamen_toner.json',
+      style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
 center: [78.3, 30.2] ,
       zoom: 7,
       attributionControl: false

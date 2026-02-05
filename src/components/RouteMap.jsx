@@ -1,9 +1,9 @@
 // RouteMap.js
-import React, { useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { useRef, useImperativeHandle, forwardRef, useEffect } from 'react';
 import * as d3 from 'd3';
 import bike from '../images/bike.svg';
 import './Route.css';
-export const RouteMap = forwardRef((props, ref) => {
+const RouteMap = forwardRef(({ autoStart = true }, ref) => {
   const svgRef = useRef();
   const locations = useRef([]);
   const started = useRef(false);
@@ -16,6 +16,12 @@ export const RouteMap = forwardRef((props, ref) => {
       }
     }
   }));
+  useEffect(() => {
+  if (autoStart && !started.current) {
+    started.current = true;
+    drawMap();
+  }
+}, [autoStart]);
 
   function drawMap() {
     const locs = [
