@@ -1,3 +1,5 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import gallery1 from '../images/gallery1.jpg';
 import gallery2 from '../images/gallery2.jpg';
 import gallery3 from '../images/gallery3.jpg';
@@ -65,6 +67,7 @@ import gallery64 from '../images/gallery64.jpg';
 import gallery65 from '../images/gallery65.jpg';
 import './Gallery.css';
 
+
 const largeImages = [
   gallery41,
   gallery5,
@@ -94,17 +97,26 @@ const Gallery = () => {
     <div className="gallery-wall">
       {largeImages.map((img, index) => (
         <div className="gallery-item large" key={`large-${index}`}>
-          <img src={img} alt="gallery large" />
+          <LazyLoadImage
+            src={img}
+            alt="gallery large"
+            effect="blur"
+          />
         </div>
       ))}
 
       {smallImages.map((img, index) => (
         <div className="gallery-item small" key={`small-${index}`}>
-          <img src={img} alt="gallery small" />
+          <LazyLoadImage
+            src={img}
+            alt="gallery small"
+            effect="blur"
+          />
         </div>
       ))}
     </div>
   );
 };
+
 
 export default Gallery;
